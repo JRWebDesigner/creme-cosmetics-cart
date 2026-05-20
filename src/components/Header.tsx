@@ -25,6 +25,55 @@ export function Header() {
             >
               Inicio
             </Link>
+            <Link
+              to="/"
+              activeProps={{ className: "text-foreground" }}
+              className="hover:text-foreground transition-colors"
+            >
+              Labios
+            </Link>
+            <Link
+              to="/"
+              activeProps={{ className: "text-foreground" }}
+              className="hover:text-foreground transition-colors"
+            >
+              Rostro
+            </Link>
+            <Link
+              to="/"
+              activeProps={{ className: "text-foreground" }}
+              className="hover:text-foreground transition-colors"
+            >
+              Ojos
+            </Link>
+            <Link
+              to="/"
+              activeProps={{ className: "text-foreground" }}
+              className="hover:text-foreground transition-colors"
+            >
+              Fragancias
+            </Link>
+            <Link
+              to="/"
+              activeProps={{ className: "text-foreground" }}
+              className="hover:text-foreground transition-colors"
+            >
+              Skincare
+            </Link>
+            <Link
+              to="/"
+              activeProps={{ className: "text-foreground" }}
+              className="hover:text-foreground transition-colors"
+            >
+              Accesorios
+            </Link>
+            <Link
+              to="/"
+              activeProps={{ className: "text-foreground" }}
+              className="hover:text-foreground transition-colors"
+            >
+              Marcas
+            </Link>
             {/* <Link
               to="/tienda"
               activeProps={{ className: "text-foreground" }}
