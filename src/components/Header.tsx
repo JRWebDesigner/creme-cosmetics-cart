@@ -6,6 +6,7 @@ import { CartDrawer } from "./CartDrawer";
 
 export function Header() {
   const items = useCart();
+  const [menuOpen, setMenuOpen] = useState(false);
   const [openCart, setOpenCart] = useState(false);
   const count = items.reduce((n, i) => n + i.quantity, 0);
 
@@ -74,27 +75,6 @@ export function Header() {
             >
               Marcas
             </Link>
-            {/* <Link
-              to="/tienda"
-              activeProps={{ className: "text-foreground" }}
-              className="hover:text-foreground transition-colors"
-            >
-              Tienda
-            </Link>
-            <Link
-              to="/sobre-nosotros"
-              activeProps={{ className: "text-foreground" }}
-              className="hover:text-foreground transition-colors"
-            >
-              Sobre Nosotros
-            </Link>
-            <Link
-              to="/contacto"
-              activeProps={{ className: "text-foreground" }}
-              className="hover:text-foreground transition-colors"
-            >
-              Contacto
-            </Link> */}
           </nav>
 
           <div className="flex items-center gap-2">
@@ -126,10 +106,45 @@ export function Header() {
             <button
               aria-label="Menú"
               className="inline-flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground hover:bg-secondary md:hidden"
+              onClick={() => setMenuOpen(!menuOpen)}
             >
               <Menu className="h-5 w-5" />
             </button>
           </div>
+          {menuOpen && (
+            <div className="absolute top-full left-0 w-full bg-background border-t border-border/60 py-4 md:hidden">
+              <nav className="flex flex-col items-center gap-4 text-sm text-muted-foreground">
+                <Link
+                  to="/"
+                  activeProps={{ className: "text-foreground" }}
+                  className="hover:text-foreground transition-colors"
+                >
+                  Inicio
+                </Link>
+                <Link
+                  to="/tienda"
+                  activeProps={{ className: "text-foreground" }}
+                  className="hover:text-foreground transition-colors"
+                >
+                  Tienda
+                </Link>
+                <Link
+                  to="/sobre-nosotros"
+                  activeProps={{ className: "text-foreground" }}
+                  className="hover:text-foreground transition-colors"
+                >
+                  Sobre Nosotros
+                </Link>
+                <Link
+                  to="/contacto"
+                  activeProps={{ className: "text-foreground" }}
+                  className="hover:text-foreground transition-colors"
+                >
+                  Contacto
+                </Link>
+              </nav>
+            </div>
+          )}
         </div>
       </header>
       <CartDrawer open={openCart} onClose={() => setOpenCart(false)} />
