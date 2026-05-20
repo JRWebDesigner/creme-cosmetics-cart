@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Plus } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import type { Product } from "@/lib/products";
 import { cart } from "@/lib/cart-store";
 
@@ -18,14 +19,16 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
             {product.tag}
           </span>
         )}
-        <img
-          src={product.image}
-          alt={product.name}
-          loading="lazy"
-          width={800}
-          height={800}
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
+        <Link to={`/product/${product.id}`} className="block h-full w-full">
+          <img
+            src={product.image}
+            alt={product.name}
+            loading="lazy"
+            width={800}
+            height={800}
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        </Link>
         <button
           onClick={() => cart.add(product)}
           aria-label={`Añadir ${product.name}`}
@@ -39,7 +42,11 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
           <p className="text-xs uppercase tracking-wider text-muted-foreground">
             {product.category}
           </p>
-          <h3 className="mt-1 font-display text-lg leading-tight">{product.name}</h3>
+          <h3 className="mt-1 font-display text-lg leading-tight">
+            <Link to={`/product/${product.id}`} className="hover:underline">
+              {product.name}
+            </Link>
+          </h3>
         </div>
         <p className="font-display text-lg">{product.price}Bs.</p>
       </div>

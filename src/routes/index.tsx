@@ -1,6 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Truck, Leaf, ShieldCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight, Sparkles, Truck, Leaf, ShieldCheck } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import heroImg from "@/assets/hero-cosmetics.jpg";
 import { products, categories } from "@/lib/products";
 import { ProductCard } from "@/components/ProductCard";
@@ -33,73 +38,27 @@ function HomePage() {
           style={{ animationDelay: "2s" }}
         />
         {/*CARRUSEL DE IMAGENES DE PROMOCIONES */}
-        <img
-          src="https://www.cosmet.com.bo/media/wysiwyg/slider/TF_Soleil-Neige_Cosmet_3840x1200_1.jpg"
-          alt="Hero Image"
-          className="w-full h-full object-cover"
-        />
-        {/* <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center md:py-32">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        <div className="relative custom-swiper h-full">
+          <Swiper
+            modules={[Autoplay, Navigation, Pagination]}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            loop
+            navigation
+            pagination={{ clickable: true }}
+            className="h-full"
           >
-            <h1 className="mt-6 font-display text-5xl leading-[1.05] text-foreground md:text-7xl">
-              Belleza
-              <br />
-              <em className="font-normal italic text-primary">en pétalos.</em>
-            </h1>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              Cosméticos limpios, fórmulas veganas y tonos pastel hechos para realzar tu luz
-              natural.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/tienda"
-                className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm text-background transition-opacity hover:opacity-90"
-              >
-                Entrar a la tienda
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-              <Link
-                to="/sobre-nosotros"
-                className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-background/60 px-6 py-3.5 text-sm text-foreground backdrop-blur hover:bg-background"
-              >
-                Nuestra historia
-              </Link>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
-          >
-            <div
-              className="relative overflow-hidden rounded-[2rem]"
-              style={{ boxShadow: "var(--shadow-petal)" }}
-            >
+            <SwiperSlide>
               <img
-                src={heroImg}
-                alt="Productos de cosmética en tonos pastel"
-                width={1600}
-                height={1200}
-                className="aspect-[5/6] w-full object-cover"
+                src="https://www.cosmet.com.bo/media/wysiwyg/slider/TF_Soleil-Neige_Cosmet_3840x1200_1.jpg"
+                alt="Promoción 1"
+                className="w-full h-full object-cover"
               />
-            </div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="absolute -bottom-6 -left-6 rounded-2xl bg-background p-4 shadow-lg"
-            >
-              <p className="text-xs text-muted-foreground">Bestseller</p>
-              <p className="font-display text-lg">Velvet Rouge</p>
-              <p className="text-sm text-primary">$24</p>
-            </motion.div>
-          </motion.div>
-        </div> */}
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={heroImg} alt="Promoción 2" className="w-full h-full object-cover" />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </section>
 
       {/* MARQUEE */}
