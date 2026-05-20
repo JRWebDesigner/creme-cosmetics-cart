@@ -122,25 +122,53 @@ export function Header() {
                   Inicio
                 </Link>
                 <Link
-                  to="/tienda"
+                  to="/"
                   activeProps={{ className: "text-foreground" }}
                   className="hover:text-foreground transition-colors"
                 >
-                  Tienda
+                  Labios
                 </Link>
                 <Link
-                  to="/sobre-nosotros"
+                  to="/"
                   activeProps={{ className: "text-foreground" }}
                   className="hover:text-foreground transition-colors"
                 >
-                  Sobre Nosotros
+                  Rostro
                 </Link>
                 <Link
-                  to="/contacto"
+                  to="/"
                   activeProps={{ className: "text-foreground" }}
                   className="hover:text-foreground transition-colors"
                 >
-                  Contacto
+                  Ojos
+                </Link>
+                <Link
+                  to="/"
+                  activeProps={{ className: "text-foreground" }}
+                  className="hover:text-foreground transition-colors"
+                >
+                  Fragancias
+                </Link>
+                <Link
+                  to="/"
+                  activeProps={{ className: "text-foreground" }}
+                  className="hover:text-foreground transition-colors"
+                >
+                  Skincare
+                </Link>
+                <Link
+                  to="/"
+                  activeProps={{ className: "text-foreground" }}
+                  className="hover:text-foreground transition-colors"
+                >
+                  Accesorios
+                </Link>
+                <Link
+                  to="/"
+                  activeProps={{ className: "text-foreground" }}
+                  className="hover:text-foreground transition-colors"
+                >
+                  Marcas
                 </Link>
               </nav>
             </div>
