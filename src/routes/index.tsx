@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   const featured = products.slice(0, 4);
-
+  //rossy te amo
   return (
     <>
       {/* HERO */}
