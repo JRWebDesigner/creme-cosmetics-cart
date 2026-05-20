@@ -7,8 +7,11 @@ import { ProductCard } from "@/components/ProductCard";
 export const Route = createFileRoute("/tienda")({
   head: () => ({
     meta: [
-      { title: "Tienda — Pétale Cosmetics" },
-      { name: "description", content: "Compra labiales, sombras, fragancias y skincare en tonos pastel." },
+      { title: "Tienda — Belu Cosmetic Cosmetics" },
+      {
+        name: "description",
+        content: "Compra labiales, sombras, fragancias y skincare en tonos pastel.",
+      },
     ],
   }),
   component: ShopPage,
@@ -34,7 +37,8 @@ function ShopPage() {
             <p className="text-xs uppercase tracking-widest text-muted-foreground">Tienda</p>
             <h1 className="mt-3 font-display text-5xl md:text-7xl">Todo el catálogo</h1>
             <p className="mt-4 max-w-xl text-muted-foreground">
-              Pasea por los pasillos de Pétale. Cada categoría es un rincón pensado para descubrir tu próximo favorito.
+              Pasea por los pasillos de Belu Cosmetic. Cada categoría es un rincón pensado para
+              descubrir tu próximo favorito.
             </p>
           </motion.div>
         </div>
@@ -64,11 +68,15 @@ function ShopPage() {
           transition={{ duration: 0.4 }}
           className="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 lg:grid-cols-4"
         >
-          {filtered.map((p, i) => <ProductCard key={p.id} product={p} index={i} />)}
+          {filtered.map((p, i) => (
+            <ProductCard key={p.id} product={p} index={i} />
+          ))}
         </motion.div>
 
         {filtered.length === 0 && (
-          <p className="py-20 text-center text-muted-foreground">No hay productos en esta categoría.</p>
+          <p className="py-20 text-center text-muted-foreground">
+            No hay productos en esta categoría.
+          </p>
         )}
       </section>
     </>

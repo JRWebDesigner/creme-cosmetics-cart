@@ -5,8 +5,12 @@ import heroImg from "@/assets/hero-cosmetics.jpg";
 export const Route = createFileRoute("/sobre-nosotros")({
   head: () => ({
     meta: [
-      { title: "Sobre Nosotros — Pétale Cosmetics" },
-      { name: "description", content: "Conoce la historia y filosofía detrás de Pétale, cosmética limpia y consciente." },
+      { title: "Sobre Nosotros — Belu Cosmetic Cosmetics" },
+      {
+        name: "description",
+        content:
+          "Conoce la historia y filosofía detrás de Belu Cosmetic, cosmética limpia y consciente.",
+      },
     ],
   }),
   component: AboutPage,
@@ -17,7 +21,13 @@ function AboutPage() {
     <>
       <section style={{ background: "var(--gradient-soft)" }}>
         <div className="mx-auto max-w-4xl px-6 py-24 text-center md:py-32">
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-xs uppercase tracking-widest text-muted-foreground">Nuestra historia</motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-xs uppercase tracking-widest text-muted-foreground"
+          >
+            Nuestra historia
+          </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,20 +40,26 @@ function AboutPage() {
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-20">
-        <img src={heroImg} alt="Filosofía Pétale" loading="lazy" className="aspect-[16/9] w-full rounded-[2rem] object-cover" />
+        <img
+          src={heroImg}
+          alt="Filosofía Belu Cosmetic"
+          loading="lazy"
+          className="aspect-[16/9] w-full rounded-[2rem] object-cover"
+        />
         <div className="mt-16 grid gap-12 md:grid-cols-2">
           <div>
             <h2 className="font-display text-3xl">Belleza consciente</h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Pétale nació en 2021 con una idea simple: la cosmética debería cuidar la piel, la mente y el planeta por igual.
-              Cada fórmula se desarrolla en lotes pequeños, con ingredientes botánicos rastreables y empaques reciclables.
+              Belu Cosmetic nació en 2021 con una idea simple: la cosmética debería cuidar la piel,
+              la mente y el planeta por igual. Cada fórmula se desarrolla en lotes pequeños, con
+              ingredientes botánicos rastreables y empaques reciclables.
             </p>
           </div>
           <div>
             <h2 className="font-display text-3xl">Pastel por diseño</h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Elegimos tonos suaves porque creemos en una belleza que acompaña sin gritar.
-              Pétale es el ritual silencioso que prepara tu día.
+              Elegimos tonos suaves porque creemos en una belleza que acompaña sin gritar. Belu
+              Cosmetic es el ritual silencioso que prepara tu día.
             </p>
           </div>
         </div>

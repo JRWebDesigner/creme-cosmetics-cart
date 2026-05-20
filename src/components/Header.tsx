@@ -14,21 +14,51 @@ export function Header() {
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link to="/" className="font-display text-2xl tracking-tight text-foreground">
-            Pétale<span className="text-primary">.</span>
+            Belu Cosmetic<span className="text-primary">.</span>
           </Link>
 
           <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-            <Link to="/" activeProps={{ className: "text-foreground" }} className="hover:text-foreground transition-colors">Inicio</Link>
-            <Link to="/tienda" activeProps={{ className: "text-foreground" }} className="hover:text-foreground transition-colors">Tienda</Link>
-            <Link to="/sobre-nosotros" activeProps={{ className: "text-foreground" }} className="hover:text-foreground transition-colors">Sobre Nosotros</Link>
-            <Link to="/contacto" activeProps={{ className: "text-foreground" }} className="hover:text-foreground transition-colors">Contacto</Link>
+            <Link
+              to="/"
+              activeProps={{ className: "text-foreground" }}
+              className="hover:text-foreground transition-colors"
+            >
+              Inicio
+            </Link>
+            {/* <Link
+              to="/tienda"
+              activeProps={{ className: "text-foreground" }}
+              className="hover:text-foreground transition-colors"
+            >
+              Tienda
+            </Link>
+            <Link
+              to="/sobre-nosotros"
+              activeProps={{ className: "text-foreground" }}
+              className="hover:text-foreground transition-colors"
+            >
+              Sobre Nosotros
+            </Link>
+            <Link
+              to="/contacto"
+              activeProps={{ className: "text-foreground" }}
+              className="hover:text-foreground transition-colors"
+            >
+              Contacto
+            </Link> */}
           </nav>
 
           <div className="flex items-center gap-2">
-            <button aria-label="Buscar" className="hidden h-10 w-10 items-center justify-center rounded-full text-muted-foreground hover:bg-secondary hover:text-foreground md:inline-flex transition-colors">
+            <button
+              aria-label="Buscar"
+              className="hidden h-10 w-10 items-center justify-center rounded-full text-muted-foreground hover:bg-secondary hover:text-foreground md:inline-flex transition-colors"
+            >
               <Search className="h-4 w-4" />
             </button>
-            <button aria-label="Favoritos" className="hidden h-10 w-10 items-center justify-center rounded-full text-muted-foreground hover:bg-secondary hover:text-foreground md:inline-flex transition-colors">
+            <button
+              aria-label="Favoritos"
+              className="hidden h-10 w-10 items-center justify-center rounded-full text-muted-foreground hover:bg-secondary hover:text-foreground md:inline-flex transition-colors"
+            >
               <Heart className="h-4 w-4" />
             </button>
             <button
@@ -44,7 +74,10 @@ export function Header() {
                 </span>
               )}
             </button>
-            <button aria-label="Menú" className="inline-flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground hover:bg-secondary md:hidden">
+            <button
+              aria-label="Menú"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground hover:bg-secondary md:hidden"
+            >
               <Menu className="h-5 w-5" />
             </button>
           </div>

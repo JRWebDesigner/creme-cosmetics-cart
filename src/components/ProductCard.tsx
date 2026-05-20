@@ -36,10 +36,12 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
       </div>
       <div className="mt-4 flex items-start justify-between gap-2">
         <div>
-          <p className="text-xs uppercase tracking-wider text-muted-foreground">{product.category}</p>
+          <p className="text-xs uppercase tracking-wider text-muted-foreground">
+            {product.category}
+          </p>
           <h3 className="mt-1 font-display text-lg leading-tight">{product.name}</h3>
         </div>
-        <p className="font-display text-lg">${product.price}</p>
+        <p className="font-display text-lg">{product.price}Bs.</p>
       </div>
     </motion.article>
   );
